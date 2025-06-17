@@ -16,6 +16,11 @@ const testConnection = async () => {
     await mongoose.connect(mongoURI);
     logger.info('Successfully connected to MongoDB Atlas!');
     
+    // Ensure database connection is established
+    if (!mongoose.connection.db) {
+      throw new Error('Database connection not established');
+    }
+    
     // Test database operations
     const collections = await mongoose.connection.db.listCollections().toArray();
     logger.info('Available collections:', collections.map(c => c.name));
