@@ -81,8 +81,8 @@ const Navbar = () => {
                 </NavigationMenuItem>
                 
                 <NavigationMenuItem>
-                  <Link to="/admin">
-                    <Button variant="outline" className={cn("ml-4", isScrolled ? "border-gray-300 text-gray-700 hover:bg-gray-50" : "border-gray-600 text-gray-100 hover:bg-gray-800")}>
+                  <Link to="/admin/login">
+                    <Button className={cn("ml-4", isScrolled ? "bg-blue-600 hover:bg-blue-700 text-white" : "bg-white text-gray-900 hover:bg-gray-100")}>
                       Admin Login
                     </Button>
                   </Link>
@@ -135,7 +135,7 @@ const Navbar = () => {
             About
           </Link>
           
-          <Link to="/admin" className={cn("block mx-3 my-2 px-3 py-2 rounded-md text-center border", isScrolled ? "border-gray-300 text-gray-700 hover:bg-gray-50" : "border-gray-600 text-gray-200 hover:bg-gray-900")} onClick={() => {
+          <Link to="/admin/login" className={cn("block mx-3 my-2 px-3 py-2 rounded-md text-center", isScrolled ? "bg-blue-600 text-white hover:bg-blue-700" : "bg-white text-gray-900 hover:bg-gray-100")} onClick={() => {
             setIsMenuOpen(false);
           }}>
             Admin Login
