@@ -125,5 +125,7 @@ export const api = {
         body: JSON.stringify(data),
         requiresAuth: false,
       }),
+    getAll: () =>
+      apiClient<{ data: any[] }>(API_ENDPOINTS.WAITLIST_ALL),
   },
 } as const; 

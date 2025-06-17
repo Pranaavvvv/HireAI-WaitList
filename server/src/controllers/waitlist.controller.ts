@@ -79,4 +79,14 @@ export const getStats = async (req: Request, res: Response, next: NextFunction) 
   } catch (error) {
     next(error);
   }
+};
+
+// Get all waitlist users (admin only)
+export const getAllUsers = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const users = await Waitlist.find().select('-verificationCode -verificationCodeExpires -__v');
+    res.status(200).json({ status: 'success', data: users });
+  } catch (error) {
+    next(error);
+  }
 }; 

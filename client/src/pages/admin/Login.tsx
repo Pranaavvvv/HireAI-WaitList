@@ -79,7 +79,6 @@ export default function Login() {
                 id="email"
                 name="email"
                 type="email"
-                placeholder="admin@hireai.com"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -91,7 +90,6 @@ export default function Login() {
                 id="password"
                 name="password"
                 type="password"
-                placeholder="Admin@123"
                 value={formData.password}
                 onChange={handleChange}
                 required

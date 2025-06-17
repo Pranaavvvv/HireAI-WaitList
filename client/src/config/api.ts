@@ -12,4 +12,5 @@ export const API_ENDPOINTS = {
   WAITLIST_REGISTER: `${API_BASE_URL}/waitlist/register`,
   WAITLIST_VERIFY: `${API_BASE_URL}/waitlist/verify`,
   WAITLIST_RESEND: `${API_BASE_URL}/waitlist/resend`,
+  WAITLIST_ALL: `${API_BASE_URL}/waitlist/all`,
 } as const; 
