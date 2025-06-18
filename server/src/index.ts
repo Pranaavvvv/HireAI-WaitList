@@ -18,7 +18,7 @@ const app = express();
 // Middleware
 app.use(helmet()); // Security headers
 app.use(cors({
-  origin: 'http://localhost:8081',
+  origin: 'https://hire-ai-wait-list.vercel.app/',
   credentials: true
 }));
 app.use(express.json());
