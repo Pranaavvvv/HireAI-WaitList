@@ -1,6 +1,6 @@
 import express from 'express';
 import { joinWaitlist, getWaitlistStats, getWaitlistEntries, updateEntryStatus } from '../controllers/waitlistController';
-import { authenticateToken } from '../middleware/auth';
+import { protect } from '../middleware/auth.middleware';
 
 const router = express.Router();
 
@@ -8,8 +8,8 @@ const router = express.Router();
 router.post('/join', joinWaitlist);
 
 // Protected routes (require authentication)
-router.get('/stats', authenticateToken, getWaitlistStats);
-router.get('/entries', authenticateToken, getWaitlistEntries);
-router.patch('/entries/:id/status', authenticateToken, updateEntryStatus);
+router.get('/stats', protect, getWaitlistStats);
+router.get('/entries', protect, getWaitlistEntries);
+router.patch('/entries/:id/status', protect, updateEntryStatus);
 
 export default router; 
