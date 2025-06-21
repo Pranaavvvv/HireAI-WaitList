@@ -109,7 +109,6 @@ function UsersTable() {
             <th className="border px-2 py-1">Industry</th>
             <th className="border px-2 py-1">Pain Points</th>
             <th className="border px-2 py-1">Verified</th>
-            <th className="border px-2 py-1">Registered</th>
           </tr>
         </thead>
         <tbody>
@@ -124,7 +123,6 @@ function UsersTable() {
               <td className="border px-2 py-1">{user.industry}</td>
               <td className="border px-2 py-1">{user.painPoints}</td>
               <td className="border px-2 py-1">{user.isVerified ? 'Yes' : 'No'}</td>
-              <td className="border px-2 py-1">{new Date(user.createdAt).toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
